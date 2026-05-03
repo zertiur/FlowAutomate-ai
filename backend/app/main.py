@@ -4,6 +4,9 @@ from fastapi.responses import FileResponse
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 
+
+app = FastAPI(title="FlowAutomate AI")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # allow all (for now)
@@ -11,7 +14,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app = FastAPI(title="FlowAutomate AI")
+
 
 app.include_router(router)
 
