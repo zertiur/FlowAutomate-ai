@@ -2,6 +2,15 @@ from fastapi import FastAPI
 from app.api.routes import router
 from fastapi.responses import FileResponse
 from pathlib import Path
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all (for now)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app = FastAPI(title="FlowAutomate AI")
 
 app.include_router(router)
