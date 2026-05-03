@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data (optional)
+data/*.csv
+*.csv
+!backend/data/sample.csv
+!backend/data/sales_data.csv
