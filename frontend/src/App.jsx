@@ -19,7 +19,7 @@ function App() {
     ]);
 
     try {
-      const response = await fetch("/run-workflow", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/run-workflow`,  {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ instruction: text, files: [], preview: true }),
@@ -61,7 +61,7 @@ function App() {
     ]);
 
     try {
-      const response = await fetch("/run-workflow", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/run-workflow`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

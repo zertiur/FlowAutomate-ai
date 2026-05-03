@@ -18,3 +18,5 @@ data/*.csv
 *.csv
 !backend/data/sample.csv
 !backend/data/sales_data.csv
+
+node_modules/
